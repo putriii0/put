@@ -1,231 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="dashboard-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h2>Acedesign</h2>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Halaman Admin</title>  
+    <!-- CSS File -->  
+    <link rel="stylesheet" href="style.css">  
+    <!-- Boxicons CSS -->  
+    <link  
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"  
+      rel="stylesheet"  
+    />  
+    <!-- Tambahkan jQuery CDN sebelum script.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>  
+<body> 
+
+    <!-- <nav> -->
+        <div class="sidebar collapsed">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Logo</span>
             </div>
-            <div class="menu-header">
-                <h5>Menu</h5>
-                <ul>
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
-                    <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
-                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="link">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-bar-chart-alt-2 icon"></i>
+                            <span class="link">Revenue</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-pie-chart-alt-2 icon"></i>
+                            <span class="link">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="list">  
+                        <a href="#" class="nav-link">  
+                        <i class="bx bx-heart icon"></i>  
+                        <span class="link">Likes</span>  
+                        </a>  
+                    </li>  
+                    <li class="list dropdown">  
+                        <a href="#" class="nav-link">  
+                            <i class="bx bx-folder-open icon"></i>  
+                            <span class="link">Files</span>  
+                        </a>  
+                        <div class="dropdown-content">  
+                            <a href="#" class="link">File 1</a>  
+                            <a href="#" class="link">File 2</a>  
+                            <a href="#" class="link">File 3</a>  
+                        </div>  
+                    </li>  
+                </ul>  
+  
+                <div class="bottom-content">  
+                    <ul class="lists">  
+                        <li class="list">  
+                            <a href="#" class="nav-link">  
+                            <i class="bx bx-cog icon"></i>  
+                            <span class="link">Settings</span>  
+                            </a>  
+                        </li>  
+                        <li class="list">  
+                            <a href="#" class="nav-link">  
+                            <i class="bx bx-log-out icon"></i>  
+                            <span class="link">Logout</span>  
+                            </a>  
+                        </li>   
+                    </ul>  
+                </div>  
                 </ul>
             </div>
-            <div class="business-header">
-                <h5>Business</h5>
-                <ul>
-                    <li><a href="#"><i class="fas fa-shipping-fast"></i> Shipment</a></li>
-                    <li><a href="#"><i class="fas fa-user-tie"></i> Employee</a></li>
-                </ul>
-            </div>
-            <div class="footer">
-                <p><strong>Acedesign 2022</strong></p>
-                <p>Platform for solution of all types of business to be more advanced.</p>
-            </div>
         </div>
+    <!-- </nav> -->
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." class="search-input">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </div>
-            <div class="overview-section">
-                <h5><strong>Overview</strong></h5>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fas fa-shopping-basket"></i>
-                        </div>
-                        <div class="percentage positive">
-                            +24%
-                        </div>
-                        <div class="amount">
-                            $27,340.00
-                        </div>
-                        <div class="label">
-                            Total Sales
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="percentage negative">
-                            -32%
-                        </div>
-                        <div class="amount">
-                            $7,340.00
-                        </div>
-                        <div class="label">
-                            Total Expenses
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="percentage positive">
-                            +48%
-                        </div>
-                        <div class="amount">
-                            18,340.00
-                        </div>
-                        <div class="label">
-                            Total Visitors
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="percentage negative">
-                            -12%
-                        </div>
-                        <div class="amount">
-                            11,340.00
-                        </div>
-                        <div class="label">
-                            Total Orders
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="chart-section">
-                    <h5><strong>Income vs Expense</strong></h5>
-                    <canvas id="incomeExpenseChart" width="300" height="75"></canvas>
-                </div>
-            </div>
+    <!-- <section class="overlay"></section>  
 
-            <div class="products-section">
-                <h5><strong>Popular Products</strong></h5>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Photos</th>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Category</th>
-                            <th>Brand</th>
-                            <th>Price</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://via.placeholder.com/50" alt="Iphone 13"></td>
-                            <td>Iphone 13</td>
-                            <td>Apr 12, 2022</td>
-                            <td>Technic</td>
-                            <td>Apple</td>
-                            <td>$99.89</td>
-                            <td>Available</td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://via.placeholder.com/50" alt="Macbook 14"></td>
-                            <td>Macbook 14</td>
-                            <td>Apr 12, 2022</td>
-                            <td>Technic</td>
-                            <td>Apple</td>
-                            <td>$99.89</td>
-                            <td>Available</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    
+    <section class="overlay"></section>   -->
+
+    <main class="main-content">
+        <header class="header">  
+            <div class="search-container">  
+                <input type="text" placeholder="Search here..." class="search-input">  
+                <i class="bx bx-search icon"></i>  
+            </div>  
+            <div class="header-icons"> 
+                    <i class="bx bx-bell icon"></i>  
+                    <i class="bx bx-message-rounded icon"></i>  
+                <div class="profile-icon">  
+                    <img src="image2.JPG" alt="Profile" />  
+                </div>  
+            </div>  
+        </header>
+
+        <section class="content">
+            <div class="card-container">  
+            <div class="card blue">  
+                <h2>Total Income</h2>  
+                <p class="amount">$ 579,000</p>  
+                <p class="saved">Saved 25%</p>  
+            </div>  
+            <div class="card light-blue">  
+                <h2>Total Expenses</h2>  
+                <p class="amount">$ 79,000</p>  
+                <p class="saved">Saved 25%</p>  
+            </div>  
+            <div class="card purple">  
+                <h2>Cash on Hand</h2>  
+                <p class="amount">$ 92,000</p>  
+                <p class="saved">Saved 25%</p>  
+            </div>  
+            <div class="card green">  
+                <h2>Net Profit Margin</h2>  
+                <p class="amount">$ 179,000</p>  
+                <p class="saved">Saved 65%</p>  
+            </div>  
+        </div>  
+        <div class="charts-container">  
+            <div class="chart">  
+                <h2>AP and AR Balance</h2>  
+                <p>Avg. $5,309</p>  
+                <div class="chart-controls">  
+                    <select>  
+                        <option>Monthly</option>  
+                        <option>Yearly</option>  
+                    </select>  
+                    <select>  
+                        <option>Last Year</option>  
+                        <option>This Year</option>  
+                    </select>  
+                </div>  
+                <div class="chart-placeholder">
+                    <canvas id="myBarChart"></canvas> <!-- script.js -->
+                </div>  
+            </div>  
+            <div class="budget-container">  
+                <div class="budget">  
+                    <h2>% of Income Budget</h2>  
+                    <div class="pie-chart">
+                        <canvas id="myPieChart1"></canvas> <!-- script.js -->
+                    </div>
+                    <p>Balance: $18,570</p>  
+                    <a href="#">View Full Report</a>  
+                </div>  
+                <div class="budget">  
+                    <h2>% of Expenses Budget</h2>  
+                    <div class="pie-chart">
+                        <canvas id="myPieChart2"></canvas> <!-- script.js -->
+                    </div>
+                    <p>Balance: $18,570</p>  
+                    <a href="#">View Full Report</a>  
+                </div>  
+            </div>  
         </div>
-
-        <!-- Right Sidebar -->
-        <div class="right-sidebar">
-            <div class="icon-container">
-                <div class="icon-circle">
-                    <i class="fas fa-bell"></i> <!-- Menggunakan kelas Font Awesome yang benar -->
-                    <span class="notification-dot"></span>
-                </div>
-                <div class="icon-circle">
-                    <i class="fas fa-pencil-alt"></i> <!-- Menggunakan kelas Font Awesome yang benar -->
-                </div>
-            </div>
-            <div class="user-info">
-                <div class="user-logo">
-                    <div class="logo-circle">
-                        <i class="icon-placeholder"></i>
-                    </div>
-                    <h3>ACEDESIGN</h3>
-                </div>
-                <div class="user-stats">
-                    <div class="stat-item">
-                        <strong>218</strong>
-                        <p>Products</p>
-                    </div>
-                    <div class="stat-item">
-                        <strong>2,580</strong>
-                        <p>Followers</p>
-                    </div>
-                </div>
-                <div class="reputation">
-                    <h5>Reputation</h5>
-                    <div class="reputation-bar">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <span>Start Seller 78%</span>
-                    </div>
-                </div>
-                <div class="recent-orders">
-                    <h5>Recent Orders <a href="#">See All</a></h5>
-                    <ul>
-                        <li>
-                            <div class="order-info">
-                                <img src="watch.png" alt="Watch">
-                                <span>Watch 4x</span>
-                            </div>
-                            <div class="order-amount">
-                                <strong>+$1280.00</strong>
-                                <span>2 Minutes Ago</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="order-info">
-                                <img src="macbook.png" alt="Macbook">
-                                <span>Macbook 4x</span>
-                            </div>
-                            <div class="order-amount">
-                                <strong>+$8080.00</strong>
-                                <span>2 Minutes Ago</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="order-info">
-                                <img src="iphone.png" alt="iPhone 13">
-                                <span>Iphone 13 4x</span>
-                            </div>
-                            <div class="order-amount">
-                                <strong>+$5680.00</strong>
-                                <span>2 Minutes Ago</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        </section>  
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-</body>
+</body>  
 </html>
